@@ -30,8 +30,19 @@ The code has been tested running under Python 3.6.3. The required packages are a
 ## Example to Run the Codes
 The instruction of commands has been clearly stated in the codes (see the ```parser``` function).
 
-### Training baselines
+### Training codes
+#### Training baselines
 For training on CIFAR100 dataset
 ```
-python train_baseline.py --model ensemble_3_resnet18  --dataset CIFAR100 --save_dir bs
+python train_baseline.py --model ensemble_3_resnet18 --dataset CIFAR100 --bs 64 --lr 0.02 --save_dir bs
+```
+#### Training ADP
+For training on CIFAR100 dataset
+```
+python train_adp.py --model ensemble_3_resnet18 --dataset CIFAR100 --bs 64 --lr 0.02 --alpha 2.0 --lamda 0.5 --save_dir bs
+```
+#### Training PDD_DEG
+For training on CIFAR100 dataset
+```
+python train_pdd_deg.py --model ensemble_3_resnet18_fc --dataset CIFAR100 --bs 64 --lr 0.02 --alpha 1.0 --beta 0.01 --save_dir bs
 ```
