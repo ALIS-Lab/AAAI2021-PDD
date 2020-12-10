@@ -46,3 +46,19 @@ For training on CIFAR100 dataset
 ```
 python train_pdd_deg.py --model ensemble_3_resnet18_fc --dataset CIFAR100 --bs 64 --lr 0.02 --alpha 1.0 --beta 0.01 --save_dir bs
 ```
+
+### Evaluation codes
+#### Whitebox test
+For testing the model of pdd_deg on CIFAR100 dataset, attack method:PGD, norm:L_inf
+```
+python whitebox_test.py --method pdd_deg --dataset CIFAR100 --attack PGD --norm Linf --bs 20
+```
+#### Blackbox test
+For testing the model of pdd_deg on CIFAR100 dataset, type of black-box attack:oblivious, surrogate model: vgg16 baseline, attack method:PGD, norm:L_inf
+```
+python blackbox_test.py --method pdd_deg --black_attack_type oblivious --surrogate_model bs_vgg16 --dataset CIFAR100 --attack PGD --norm Linf --bs 20
+```
+For testing the model of pdd_deg on CIFAR100 dataset, type of black-box attack:adaptive, surrogate model: resnet34 pdd_deg, attack method:PGD, norm:L_inf
+```
+python blackbox_test.py --method pdd_deg --black_attack_type adaptive --surrogate_model pdd_deg_resnet34 --dataset CIFAR100 --attack PGD --norm Linf --bs 20
+```
