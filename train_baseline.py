@@ -21,7 +21,6 @@ parser.add_argument(
     default='ensemble_3_resnet18',
     help='CNN architecture')
 parser.add_argument('--dataset', type=str, default='CIFAR100', help='datasets')
-parser.add_argument('--method', type=str, default='ori', help='method')
 parser.add_argument('--bs', default=64, type=int, help='batch size')
 parser.add_argument('--lr', default=0.02, type=float, help='learning rate')
 parser.add_argument(
