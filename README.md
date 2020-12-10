@@ -20,16 +20,18 @@ If you want to use our codes in your research, please cite the following referen
   year={2021}
 }
 ```
+
 ## Environment Requirement
 The code has been tested running under Python 3.6.3. The required packages are as follows:
 * pytorch == 1.4.0
 * torchvision == 0.2.1
 * numpy == 1.17.0
 
+## Datasets
+Fashion-MNIST CIFAR100 Tiny-Image
 
 ## Example to Run the Codes
 The instruction of commands has been clearly stated in the codes (see the ```parser``` function).
-
 ### Training codes
 #### Training baselines
 For training on CIFAR100 dataset
